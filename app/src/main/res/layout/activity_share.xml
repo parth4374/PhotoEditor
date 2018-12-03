@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secondbg"
+    tools:context="photoeditor.parth.com.photocollage.photocollage.viaxor.com.photoeditor.ShareActivity">
+
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:src="@drawable/bannnerlast" />
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+
+            android:weightSum="3">
+
+            <ImageView
+
+                android:id="@+id/image_View2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:padding="20dp" />
+
+
+            <TextView
+                android:id="@+id/textpath1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:layout_toRightOf="@+id/image_View"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:textColor="#073648" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+
+        android:layout_below="@+id/linear"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/facebook1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:id="@+id/whatsaap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:src="@drawable/whatsapp" />
+
+        <ImageView
+            android:id="@+id/share_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/top"
+
+    tools:context="photoeditor.parth.com.photocollage.photocollage.viaxor.com.photoeditor.Photocollage2">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/savebtn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp"
+                android:src="@drawable/save" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pattern"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/Buttonbar"
+        android:layout_below="@id/topPanel"
+        android:scaleType="fitXY"
+        android:src="@drawable/pattern" />
+
+    <RelativeLayout
+        android:id="@+id/savepg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/Buttonbar"
+        android:layout_below="@+id/topPanel">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:id="@+id/first_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/frame1" />
+
+    </RelativeLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorAccent"
+        app:indicatorName="BallPulseIndicator" />
+
+
+    <RelativeLayout
+        android:id="@+id/Buttonbar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/seekbar">
+
+        <LinearLayout
+            android:id="@+id/Linear"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/btnframe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/frame"
+                android:text="Frame" />
+
+            <ImageView
+                android:id="@+id/btnbrightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/brightness"
+                android:text="Brightness" />
+
+            <ImageView
+                android:id="@+id/btnbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/background"
+                android:text="Background" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/brightnesstext"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="100"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/brightness"
+                android:layout_toRightOf="@id/brightnesstext"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scrollbars="none" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+             >
+
+                <TextView
+                    android:id="@+id/blurtext"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="100"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatSeekBar
+                    android:id="@+id/blur_seek"
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp"
+                    android:layout_above="@+id/buttonbar"
+                    android:layout_toRightOf="@+id/blurtext"
+                    android:layout_weight="1"
+                    android:progress="100"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/back_recycler_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/galleryimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/gallery"
+                        android:text="gallery"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

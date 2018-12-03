@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/secondbg"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Saved Images"
+        android:textColor="#073648"
+        android:textSize="23sp" />
+
+    <GridView
+        android:id="@+id/PhoneImageGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:padding="10dp"
+        android:verticalSpacing="10dp" />
+
+
+</RelativeLayout>
